@@ -1,0 +1,932 @@
+*,
+*::before
+*::after {
+    box-sizing: border-box;
+}
+:root {
+    --grid: 1fr;
+}
+@font-face {
+    font-family: 'SamsungSansRegular';
+    src: url(/fonts/samsungsharpsans.otf) format('opentype');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'SamsungSansMedium';
+    src: url(/fonts/samsungsharpsans-medium.otf) format('opentype');
+    font-weight: medium;
+}
+@font-face {
+    font-family: 'SamsungSansBold';
+    src: url(/fonts/samsungsharpsans-bold.otf) format('opentype');
+    font-weight: bold;
+}
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+
+.bold {
+    font-family: 'SamsungSansBold';
+}
+
+
+/*TEXT STYLES*/
+/*TEXT STYLES*/
+#title {
+    color: #000;
+    text-align: left;
+    font-family: 'SamsungSansBold';
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+h1 {
+    color: #000;
+    text-align: center;
+    font-family: 'SamsungSansBold';
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: auto;
+}
+h2 {
+    color: #000;
+    text-align: center;
+    font-family: 'SamsungSansRegular';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+h3 {
+    color: #000;
+    text-align: left;
+    font-family: 'SamsungSansRegular';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    /* padding-left: 1.5em; */
+    /* margin-bottom: 5px; */
+}
+/*TEXT STYLES*/
+
+/* TEXT BOX STYLES */
+#textBox {
+    border: none;
+    border-radius: 16px;
+    background: #E1E1E1;
+    outline: none;
+    width: 90%;
+    height: 50px;
+    color: #000;
+    text-align: left;
+    font-family: 'SamsungSansRegular';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 1em;
+}
+#textBoxBig {
+    border: none;
+    border-radius: 16px;
+    background: #E1E1E1;
+    outline: none;
+    width: 90%;
+    height: 250px;
+    resize: both;
+    overflow: auto;
+    direction: ltr;
+    font-family: 'SamsungSansRegular';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 1.5em;
+    padding-right: 0;
+}
+/* TEXT BOX STYLES */
+
+/* NAVBAR */
+#navbar {
+    width: 100%;
+    background: rgba(40, 38, 38, 0.50);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    /* flex-shrink: 0; */
+    position: fixed;
+    padding: 1em 0;
+    text-align: center;
+    z-index: 999;
+}
+.nav_bar {
+    margin: 0;
+    padding: 0;
+}
+
+.nav_list {
+    margin: 0 2.5em;
+    margin-top: 1em;
+    padding: 0;
+    font-family: 'SamsungSansRegular';
+    list-style: none;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: space-between;
+}
+.nav_link {
+    text-decoration: none;
+    color: white;
+}
+.social-media-links{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin-right: auto;
+    display: inline-flexbox;
+}
+/* NAVBAR */
+
+.btn-primary {
+    text-decoration: none;
+    color: white;
+    font-family: 'SamsungSansBold';
+    font-size: 15px;
+    text-align: center;
+    line-height: 25px;
+    cursor: pointer;
+    display: inline-block;
+    width: 105px;
+    height: 25px;
+    background-color: black;
+    border-radius: 82.5px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    padding: 7px 13px;
+    transition: 0.15s;
+}
+
+.btn-primary:hover {
+    opacity: 80%;
+}
+
+.btn-primary:active {
+    opacity: 60%;
+}
+
+.btn-secondary {
+    text-decoration: none;
+    color: white;
+    font-family: 'SamsungSansBold';
+    font-size: 15px;
+    text-align: center;
+    line-height: 25px;
+    cursor: pointer;
+    display: inline-block;
+    width: 105px;
+    height: 25px;
+    background-color: #525051;
+    border-radius: 82.5px;
+    margin-bottom: 10px;
+    padding: 7px 13px;
+    transition: 0.15s;
+}
+
+.btn-secondary:hover {
+    opacity: 90%;
+}
+
+.btn-secondary:active {
+    opacity: 80%;
+}
+
+.btn-tertiary {
+    font-family: 'SamsungSansMedium';
+    font-size: 13px;
+    color: black;
+}
+/* BUTTONS */
+
+/*index.html*/
+/* HERO */
+#hero {
+    /* padding: 0 0; */
+    padding: 6.4em 0 0 0;
+    width: 100vw;
+    
+}
+.featured-tv {
+    width: 100%;
+    overflow: hidden;
+}
+.featured-tv>img {
+    width: 100%;
+    object-fit: cover;
+    scale: 1.25;
+    transform: translate(0, -2.5%);
+}
+/* HERO */
+
+/* INRODUCTION */
+#introduction {
+    width: 100vw;
+}
+#introduction > div {
+    margin: 2em;
+    text-align: center;
+}
+
+.primary-text {
+    margin-top: 0;
+    font-family: 'SamsungSansBold';
+    font-size: 30px;
+    text-align: center;
+}
+
+.secondary-text {
+    font-family: 'SamsungSansBold';
+    padding-top: 30px;
+    font-size: 20px;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.featured-tv-2 {
+    width: 90%;
+    background:#E1E1E1;
+    border-radius: 35px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+}
+
+.featured-tv-3 {
+    width: 90%;
+    background:#E1E1E1;
+    border-radius: 35px;
+    margin-right: 10px;
+}
+
+.featured-tv-2 > img {
+    width: 100%;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+}
+
+.featured-tv-3 > img {
+    width: 100%;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+
+}
+
+.model-name {
+    font-family: 'SamsungSansBold';
+    font-size: 25px;
+    margin-top: 5px;
+    margin-bottom: 2px;
+}
+
+.tagline {
+    font-family: 'SamsungSansRegular';
+    font-weight: normal;
+    font-size: 13px;
+    padding-bottom: 0px;
+    margin-top: 0;
+    padding-top: 0;
+}
+/* INRODUCTION */
+/*index.html*/
+
+/*support.html*/
+.textHeadings {
+    padding:0 28px;
+    padding-top: 118px;
+}
+
+.textHeadings > h1 {
+    padding-top: 30px;
+}
+.textHeadings > h2 {
+    margin-top: 5px;
+}
+#textField {
+    padding-top: 1em;
+    padding-left: 1.5em;
+    width: 95%;
+    margin-bottom: 1.5em;
+}
+#textField > h3 {
+    padding-left: 0;
+}
+#everything-else {
+    font-size: 45px;
+}
+#submit{
+    margin-top: 1.5em;
+}
+/*support.html*/
+
+
+
+/* STORE */
+.textHeadings {
+    padding:0 28px;
+    padding-top: 118px;
+}
+.textHeadings > h1 {
+    padding-top: 30px;
+}
+.textHeadings > h2 {
+    margin-top: 5px;
+}
+.textFields {
+   margin: 30px 28px;
+   margin-bottom: 20px;
+}
+.textFields > h3 {
+    padding-left: 0;
+    margin-bottom: 1px;
+}
+
+.flex-container-2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    padding: 10px 0px 100px;
+    row-gap: 40px;
+}
+
+.store-discounted-tv-1 {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 80%;
+    align-items: center;
+    margin-top: -30px;
+    transition: box-shadow 0.1s ease, 
+    background-color 0.1s ease, transform 0.07s ease;
+}
+
+.store-discounted-tv-1:hover {
+    transform: scale(1.003);
+    box-shadow: 0px 0px 4px rgba(53, 53, 53, 0.3);
+    background-color: rgb(250, 250, 250);
+}
+
+.tv-stats {
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tv-stats-2 {
+    height: 115px;
+    display: flex;
+    flex-direction: column;
+}
+
+.price {
+    color: #000;
+    text-align: center;
+    font-family: 'SamsungSansRegular';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.everything-else {
+    margin-bottom: 55px;
+}
+
+.store-images {
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: -35px;
+
+}
+
+.stats-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    display: inline-block;
+}
+.store-stats {
+    color: #000;
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+    font-family: 'SamsungSansRegular';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 15px 0px 6px 0px;
+}
+
+.orig-price {
+    color: #525051;
+    display: inline-block;
+    text-align: center;
+    font-family: 'SamsungSansRegular';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration-line: line-through;
+    margin-top: 0px;
+    margin-right: 5px;
+}
+
+.discount {
+    color: #2189FF;
+    display: inline-block;
+    font-family: 'SamsungSansRegular';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 0px;
+}
+/* STORE */
+
+/* PRODUCT INFORMATION */
+.flex-container-3 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: top;
+    width: auto;
+    padding: 30px 0px 70px;
+    row-gap: 15px;
+}
+
+.tv-display-product {
+    width: 425px;
+
+    align-items: center;
+    margin-top: -30px;
+}
+
+.tv-display-product-3 {
+    width: 425px;
+
+    align-items: center;
+    margin-top: -30px;
+}
+
+
+.product-image {
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: -35px;
+    align-items: top;
+}
+
+.tv-description {
+    color: #000;
+    text-align: left;
+    font-family: 'SamsungSansRegular';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: -16px;
+    flex-basis: 80%;
+    /* min-width: 400px; */
+}
+
+.tv-description-specs {
+    color: #000;
+    text-align: left;
+    font-family: 'SamsungSansRegular';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: -16px;
+    flex-basis: 80%;
+    /* min-width: 400px; */
+}
+
+.tv-description-product-1 {
+    color: #000;
+    text-align: left;
+    font-family: 'SamsungSansRegular';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: -16px;
+    flex-basis: 80%;
+    /* min-width: 400px; */
+}
+
+.tv-description-product-2 {
+    color: #000;
+    text-align: left;
+    font-family: 'SamsungSansRegular';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: -16px;
+    flex-basis: 80%;
+    /* min-width: 400px; */
+}
+
+
+.btn-space {
+    margin-left: 23px;
+    display: flex;
+    justify-content: center;
+   
+}
+
+.buy-price {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    margin-left: 5px;
+    color: #000;
+    text-align: center;
+    font-family: 'SamsungSansRegular';
+    font-size: 16px;
+    font-style: normal;
+    line-height: 40px;
+    
+}
+
+.tech-specs {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.tv-specs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: top;
+    width: auto;
+    margin: 0 auto;
+    padding: 15px 0px 30px;
+    row-gap: 40px;
+    
+}
+
+.stars {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 100px;
+}
+
+@media (min-width: 800px) {
+    .flex-container-3 {
+        padding: 50px 0px 70px;
+        row-gap: 40px;
+    }
+    
+    .tv-specs {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: top;
+        width: auto;
+        margin: 0 auto;
+        padding: 15px 0px 30px;
+        row-gap: 0px;
+        
+    }
+
+    .tv-display-product-3 {
+        width: 425px;
+    
+        align-items: center;
+        margin-top: -30px;
+        
+    }
+    
+
+    .tv-description {
+        flex-basis: 40%;
+        margin-left: 30px;
+    }
+
+    .tv-description-specs {
+        flex-basis: 37%;
+        margin-left: 15px;
+    }
+
+    .tv-description-product-1 {
+        flex-basis: 10%;
+        margin-left: 30px;
+    }
+
+    .tv-description-product-2 {
+        flex-basis: 35%;
+        margin-left: 30px;
+    }
+    
+    .btn-space {
+        margin-left: 25px;
+        justify-content: left;
+    }
+    
+}
+
+/* PRODUCT INFORMATION */
+
+/* CONFIRM PURCHASE */
+.tv-display-product-2 {
+    width: 500px;
+    align-items: center;
+    margin-top: -39px;
+}
+
+.tv-description-2 {
+    color: #000;
+    text-align: left;
+    font-family: 'SamsungSansRegular';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    flex-basis: 57%;
+    /* min-width: 400px; */
+}
+
+.product-info {
+    margin-left: -35px;
+}
+
+.flex-container-4 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    padding: 30px 0px 70px;
+    row-gap: 0px;
+    column-gap: 10px;
+}
+
+#textBox-2 {
+    border: none;
+    border-radius: 16px;
+    background: #E1E1E1;
+    outline: none;
+    width: 90%;
+    height: 39px;
+    color: #000;
+    text-align: left;
+    font-family: 'SamsungSansRegular';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 1em;
+}
+
+.customer-info {
+    text-align: left;
+    justify-content: left;
+    align-items: left;
+    margin-bottom: 3px;
+}
+
+.text-box {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    flex-basis: 100%;
+    margin-left: 18px;
+
+}
+
+.btn-space-2 {
+    flex-basis: 50%;
+}
+
+.btn-checkout {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+   
+}
+
+@media (min-width: 780px) {
+    
+    #textBox-2 {
+        width: 85%;
+    }
+
+    .tv-description-2 {
+        color: #000;
+        text-align: left;
+        font-family: 'SamsungSansRegular';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-left: 40px;
+        flex-basis: 15%;
+        /* min-width: 400px; */
+    }
+    
+    .flex-container-4 {
+        row-gap: 0px;
+        column-gap: 0px;
+        width: 60%;
+        margin: 0 auto;
+    }
+    
+    .text-box {
+        flex-basis: 33%;
+    }
+    
+    .btn-space-2 {
+        flex-basis: 33%;
+    }
+
+    .btn-checkout {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: left;
+       
+    }
+
+}
+
+/* CONFIRM PURCHASE */
+
+/* FOOTER */
+#footer {
+    /* width: 100%;  */
+    background: rgba(40, 38, 38, 0.50);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo img {
+    height: 40px;
+    width: auto;
+    margin-left: 0.5em;
+}
+
+.footer-text p {
+    font-size: 14px;
+    font-family: 'SamsungSansRegular';
+    font-weight: normal;
+    color: white;
+    margin-left: 0.8em;
+    margin-right: auto;
+}
+
+.social-media-icons {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 0.5em;
+   
+}
+
+.social-media-icons a {
+    margin-right: 10px;
+}
+
+.social-media-icons img {
+    height: 30px;
+    width: auto;
+}
+/* FOOTER */
+
+/* media queries */
+/* desktop css */
+@media (min-width: 1001px) {
+    /* NAVIGATION */
+    .nav_bar {
+        display: flex;
+        align-items: center;
+    }
+
+    #navbar {
+        padding: 1em 2.5em;
+    }
+
+    .logo {
+        margin-left: 1.5em;
+        margin-right: 60px;
+    } 
+
+    nav ul li a {
+        display: block;
+        padding: 10px 25px;
+    }
+
+    .nav_list {
+        font-size: 15px;
+        margin-top: 0em;
+    }
+
+    /* NAVIGATION */
+
+    /* STORE */
+
+    .textHeadings {
+        padding:0 28px;
+        padding-top: 90px;
+    }
+    #title {
+        font-size: 58px;
+        margin-left: 150px;
+    }
+    .textHeadings > h1 {
+        padding-top: 30px;
+        font-size: 45px;
+    }
+    .textHeadings > h2 {
+        font-size: 20px;
+    } 
+
+    .store-discounted-tv-1 {
+        width: 450px;
+        display: flex;
+        flex-direction: column;
+        flex-basis: 30%;
+        align-items: center;
+        margin-top: -30px;
+    }
+
+    .store-tv-space {
+        width: 50px;
+    }
+
+
+    /* INTRODUCTION */
+/*index.html*/
+
+    /* FOOTER */
+    .footer-text p {
+        margin-left: 1.5em;
+    }
+    /* FOOTER */
+}
+
+    
+
+@media (min-width: 780px) and (max-width: 1000px) {
+
+    .textHeadings {
+        padding:0 28px;
+        padding-top: 118px;
+    }
+    .textHeadings > h1 {
+        padding-top: 30px;
+        font-size: 45px;
+    }
+    .textHeadings > h2 {
+        font-size: 20px;
+    }
+
+    .store-discounted-tv-1 {
+        width: 450px;
+        display: flex;
+        flex-direction: column;
+        flex-basis: 45%;
+        align-items: center;
+        margin-top: -30px;
+    }
+
+    .store-tv-space {
+        width: 20px;
+    }
+
+}

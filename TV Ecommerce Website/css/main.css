@@ -1,0 +1,720 @@
+*,
+*::before
+*::after {
+    box-sizing: border-box;
+}
+:root {
+    --grid: 1fr;
+}
+@font-face {
+    font-family: 'SamsungSansRegular';
+    src: url(/fonts/samsungsharpsans.otf) format('opentype');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'SamsungSansMedium';
+    src: url(/fonts/samsungsharpsans-medium.otf) format('opentype');
+    font-weight: medium;
+}
+@font-face {
+    font-family: 'SamsungSansBold';
+    src: url(/fonts/samsungsharpsans-bold.otf) format('opentype');
+    font-weight: bold;
+}
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100%;
+    min-height: 100%;
+}
+
+/* POP UP */
+#newsletter-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(40, 38, 38, 0.50);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(15px);
+  }
+  
+  #popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background-color: #fff;
+    padding: 40px;
+    text-align: center;
+    border-radius: 16px;
+  }
+
+  #textBoxPopUp {
+    border: none;
+    border-radius: 16px;
+    background: #E1E1E1;
+    outline: none;
+    width: 100%;
+    height: 37px;
+    color: #000;
+    text-align: left;
+    font-family: 'SamsungSansRegular';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin:auto;
+    padding: 20px;
+    margin-bottom: 15px;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+  
+  #close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #000;
+  }
+
+/*TEXT STYLES*/
+#title {
+    color: #000;
+    text-align: left;
+    font-family: 'SamsungSansBold';
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+h1 {
+    color: #000;
+    text-align: center;
+    font-family: 'SamsungSansBold';
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: auto;
+}
+h2 {
+    color: #000;
+    text-align: center;
+    font-family: 'SamsungSansRegular';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+h3 {
+    color: #000;
+    text-align: left;
+    font-family: 'SamsungSansRegular';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    /* padding-left: 1.5em; */
+    /* margin-bottom: 5px; */
+}
+/*TEXT STYLES*/
+
+/* TEXT BOX STYLES */
+#textBox {
+    border: none;
+    border-radius: 16px;
+    background: #E1E1E1;
+    outline: none;
+    width: 100%;
+    height: 37px;
+    color: #000;
+    text-align: left;
+    font-family: 'SamsungSansRegular';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin:auto;
+    padding: 20px;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+#textBoxBig {
+    border: none;
+    border-radius: 16px;
+    background: #E1E1E1;
+    outline: none;
+    width: 100%;
+    height: 250px;
+    resize: both;
+    overflow: auto;
+    direction: ltr;
+    font-family: 'SamsungSansRegular';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: auto;
+    padding: 20px;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+input {
+    text-align: left;
+}
+/* TEXT BOX STYLES */
+
+/* NAVBAR */
+#navbar {
+    width: 100%;
+    background: rgba(40, 38, 38, 0.50);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    /* flex-shrink: 0; */
+    position: fixed;
+    padding: 1em 0;
+    text-align: center;
+    z-index: 999;
+}
+.nav_bar {
+    margin: 0;
+    padding: 0;
+}
+
+.nav_list {
+    margin: 0 2.5em;
+    margin-top: 1em;
+    padding: 0;
+    font-family: 'SamsungSansRegular';
+    list-style: none;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: space-between;
+}
+.nav_link {
+    text-decoration: none;
+    color: white;
+}
+.social-media-links{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin-right: auto;
+    display: inline-flexbox;
+}
+/* NAVBAR */
+
+/* BUTTONS */
+.btn-primary {
+    text-decoration: none;
+    color: white;
+    font-family: 'SamsungSansBold';
+    font-size: 13px;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+    display: inline-block;
+    width: 86px;
+    height: 20px;
+    background-color: black;
+    border-radius: 82.5px;
+    margin-bottom: 10px;
+    /* margin-top: 0px; */
+    margin-right: 10px;
+    padding: 7px 13px;
+}
+.btn-secondary {
+    text-decoration: none;
+    color: white;
+    font-family: 'SamsungSansBold';
+    font-size: 13px;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+    display: inline-block;
+    width: 86px;
+    height: 20px;
+    background-color: #525051;
+    border-radius: 82.5px;
+    margin-bottom: 10px;
+    padding: 7px 13px;
+}
+.btn-tertiary {
+    font-family: 'SamsungSansMedium';
+    font-size: 13px;
+    color: black;
+}
+/* BUTTONS */
+
+/*index.html*/
+/* HERO */
+#hero {
+    /* padding: 0 0; */
+    padding: 6.4em 0 0 0;
+    width: 100vw;
+    
+}
+.featured-tv {
+    width: 100%;
+    overflow: hidden;
+}
+.featured-tv>img {
+    width: 100%;
+    object-fit: cover;
+    scale: 1.25;
+    transform: translate(0, -2.5%);
+}
+/* HERO */
+
+/* INRODUCTION */
+#introduction {
+    width: 100vw;
+}
+#introduction > div {
+    margin: 2em;
+    text-align: center;
+}
+
+.primary-text {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-family: 'SamsungSansBold';
+    font-size: 30px;
+    text-align: center;
+}
+
+.secondary-text {
+    font-family: 'SamsungSansBold';
+    padding-top: 30px;
+    font-size: 20px;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.featured-tv-2 {
+    width: 90%;
+    background:#E1E1E1;
+    border-radius: 35px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+}
+
+.featured-tv-3 {
+    width: 90%;
+    background:#E1E1E1;
+    border-radius: 35px;
+    margin-right: 10px;
+}
+
+.featured-tv-2 > img {
+    width: 100%;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+}
+
+.featured-tv-3 > img {
+    width: 100%;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+
+}
+
+.model-name {
+    font-family: 'SamsungSansBold';
+    font-size: 25px;
+    margin-top: 5px;
+    margin-bottom: 2px;
+}
+
+.tagline {
+    font-size: 13px;
+    padding-bottom: 0;
+    margin-top: 0;
+    padding-top: 0;
+    text-align: center;
+}
+/* INRODUCTION */
+/*index.html*/
+
+/*support.html*/
+.textHeadings {
+    padding:0 28px;
+    padding-top: 118px;
+}
+.textHeadings > h1 {
+    padding-top: 30px;
+}
+.textHeadings > h2 {
+    margin-top: 5px;
+}
+.textFields {
+   margin: 30px 28px;
+   margin-bottom: 20px;
+   width: 83%;
+}
+.textFields > h3 {
+    padding-left: 0;
+    margin-bottom: 1px;
+}
+#submit{
+    margin-top: 1.5em;
+}
+
+/*support.html*/
+
+/*about.html*/
+#aboutUs {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 0;
+}
+#aboutUs > h3 {
+    text-align: justify;
+    line-height: 25px;
+    padding: 10px 28px;
+}
+#certifications {
+    margin-top: 35px;
+    margin-bottom: 21px;
+}
+#samsungAuth {
+    width: 350px;
+    height: auto;
+    margin: 0 auto;
+    padding: 55px 28px;
+    padding-bottom: 20px;
+    display: block;
+}
+#lgAuth, #sonyAuth {
+    width: 350px;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px 28px;
+    display: block;
+}
+/*about.html*/
+
+/*Log In*/
+.logInFields > h3 {
+    padding-left: 0;
+    margin-bottom: 9px;
+}
+.logInFields {
+    width: 80%;
+    margin: 30px auto;
+    padding-bottom: 338px;
+}
+.password {
+    margin-bottom: 10px;
+}
+#logInBtn {
+    margin-top: 15px;
+}
+#rememberMeLabel {
+    font-family: 'SamsungSansMedium';
+    font-size: 13px;
+    color: black;
+}
+#forgotPassword {
+    margin-left: 10px;
+}
+/*Log In*/
+
+/*Purchases*/
+.tvDetails {
+    color: #000;
+    text-align: left;
+    font-family: 'SamsungSansRegular';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.bold {
+    font-family: 'SamsungSansBold';
+}
+#purchase1, #purchase2, #purchase3, #purchase4 {
+    display: flex;
+    width: 80%;
+    margin: 30px auto;
+}
+
+.tvDetails {
+    width: 100%;
+}
+.tvImage {
+    width: 100%;
+}
+.tvImage > img {
+    width: 100%;
+}
+/*Purchases*/
+
+/* FOOTER */
+#footer {
+    /* width: 100%;  */
+    background: rgba(40, 38, 38, 0.50);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo img {
+    height: 40px;
+    width: auto;
+    margin-left: 0.5em;
+}
+
+.footer-text p {
+    font-size: 14px;
+    font-family: 'SamsungSansRegular';
+    font-weight: normal;
+    color: white;
+    margin-left: 0.8em;
+    margin-right: auto;
+}
+
+.social-media-icons {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 0.5em;
+   
+}
+
+.social-media-icons a {
+    margin-right: 10px;
+}
+
+.social-media-icons img {
+    height: 30px;
+    width: auto;
+}
+/* FOOTER */
+
+/* media queries */
+/* desktop css */
+@media (min-width: 780px) {
+/*index.html*/
+    .btn-secondary, .btn-primary  {
+        line-height: 25px;
+        font-size: 15px;
+        width: 105px;
+        height: 25px;
+    }
+    /* NAVIGATION */
+    .nav_bar {
+        display: flex;
+        align-items: center;
+    }
+
+    #navbar {
+        padding: 1em 2.5em;
+    }
+
+    .logo {
+        margin-left: 1.5em;
+        margin-right: 60px;
+    } 
+
+    nav ul li a {
+        display: block;
+        padding: 10px 25px;
+    }
+
+    .nav_list {
+        font-size: 15px;
+        margin-top: 0em;
+    }
+
+    /* NAVIGATION */
+
+    /* INTRODUCTION */
+    #hero {
+        padding: 0;
+        margin: 0;
+    }
+    .featured-tv {
+        padding: 0;
+        margin: 0;
+    }
+    .featured-tv>img {
+        width: 100%;
+        scale: 1;
+        transform: translate(0);
+    }
+    #introduction > div {
+        margin: 0;
+    }
+
+    .primary-text {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 45px;
+        text-align: center;
+    }
+    
+    .secondary-text {
+        padding-top: 30px;
+        font-size: 35px;
+    }
+
+    .flex-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        padding: 10px 50px;
+    } 
+
+    .featured-tv-2 {
+        margin-right: 50px;
+        width: 600px;
+    }
+    
+    .featured-tv-3 {
+        width: 600px;
+        margin-bottom: 30px;
+    }
+
+    .model-name {
+        font-size: 35px;
+        margin-top: 5px;
+        margin-bottom: 2px;
+    }
+    
+    .tagline {
+        font-size: 18px;
+        padding-bottom: 0px;
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .featured-tv-3 > img {
+        width: 100%;
+        scale: 1;
+    } 
+    /* INTRODUCTION */
+/*index.html*/
+
+/*support.html */
+    .textHeadings {
+        padding:0 28px;
+        padding-top: 90px;
+    }
+    #title {
+        font-size: 58px;
+        margin-left: 150px;
+    }
+    .textHeadings > h1 {
+        padding-top: 30px;
+        font-size: 45px;
+    }
+    .textHeadings > h2 {
+        font-size: 20px;
+    }
+    .textFields {
+        width: 30%;
+        margin: auto;
+        margin-bottom: 20px;
+        padding-top: 10px;
+    }
+    .textFields > h3 {
+        padding-left: 0;
+    }
+
+    #textBox {
+        width: 100%;
+        margin:auto;
+    }
+    #textBoxBig {
+        width: 100%;
+    }
+    .btn-tertiary {
+        font-size: 15px;
+    }
+    /*support.html*/
+
+    /*about.html*/
+    #aboutUs {
+        width: 70%;
+        margin-top: 32px;
+    }
+    #certificationsTitle {
+        padding-top: 30px;
+        font-size: 45px;
+    }
+    #certificationImages {
+        display: flex;
+    }
+    #samsungAuth {
+        width: 400px;
+        margin-right: 15px;
+        margin-bottom: 60px;
+    }
+    #lgAuth {
+        width: 450px;
+        height: 150px;
+        padding-right: 10px;
+    }
+    #sonyAuth {
+        width: 350px;
+        height: 130px;
+        padding-left: 0px;
+    }
+
+    /*Log In*/
+    .logInFields {
+        width: 20%;
+        margin-bottom: 65px;
+    }
+    /*Log In*/
+
+    /* Purchases */
+    #purchase1, #purchase2, #purchase3, #purchase4 {
+        display: flex;
+        align-items: center;
+        width: 40%;
+        margin: 30px auto;
+    }
+    .tvDetails {
+        width: 100%;
+    }
+    .tvImage {
+        width: 40%;
+    }
+    .tvImage > img {
+        width: 100%;
+    }
+    /* Purchases */
+    /*about.html*/
+
+        /* FOOTER */
+        .footer-text p {
+            margin-left: 1.5em;
+        }
+        #footer {
+     
+        }
+        /* FOOTER */
+}
