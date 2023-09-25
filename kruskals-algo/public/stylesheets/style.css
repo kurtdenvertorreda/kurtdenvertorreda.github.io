@@ -1,0 +1,267 @@
+@import url('globals.css');
+
+
+/* NAVBAR */
+.navbar {
+  background-color: #5E88A0;
+}
+
+.nav-font {
+  font-size: 2rem;
+}
+
+div.nav-font a {
+  margin: 0 1rem;
+}
+/* NAVBAR */
+
+
+/* HERO */
+#heroPage {
+  min-height: 92vh;
+  text-align: center;
+  position: relative;
+  border-bottom: 1px solid black;
+}
+
+#heroPage .containerA > div {
+  display: flex;
+  border: 2px solid black;
+  background-color: #E3FCFF;
+  border-radius: 3vmin;
+  margin: 2rem 0;
+  width: 100%;
+  align-items: center;
+  padding: 3rem;
+  align-items: center;
+}
+
+#heroPage .containerA > div .left {
+  flex: 2;
+  /* border: 1px solid black; */
+  /* height: 100%; */
+  text-align: left;
+}
+#heroPage .containerA > div .right {
+  /* border: 1px solid red; */
+  flex: 1;
+  /* height: 100%; */
+}
+
+/* HERO */
+
+
+/* INPUT PAGE */
+#inputPage {
+  height: 100vh;
+}
+
+#inputPage .containerA > div {
+  padding: 3rem;
+  height: 100%;
+  /* background-color: gray; */
+}
+
+#inputPage .inputForms {
+  display: flex;
+  min-height: 75vh;
+}
+#inputPage .inputForms .left {
+  flex: 1;
+  /* border: 1px solid red; */
+  padding: 1rem;
+}
+
+#inputPage .inputForms .left form > div {
+  display: flex;
+  flex-direction: column;
+}
+
+#inputPage .inputForms .left form > div input {
+  margin: 0.5rem 0;
+}
+
+#inputPage .inputForms form div {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#inputPage .whInput div input {
+  width: 80%;
+}
+#inputPage .dlInput div input {
+  width: 80%;
+}
+
+#inputPage .inputForms .right {
+  flex: 1;
+  /* border: 1px solid red; */
+  /* background-color: blue; */
+  padding: 1rem;
+}
+
+#inputPage .right .map {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+}
+
+#inputPage .right .map #inputMap {
+  width: 100%;
+  height: 100%;
+}
+
+.marker {
+  align-items: center;
+}
+
+.marker svg {
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 1vmin;
+}
+
+.marker svg:hover {
+  cursor: pointer;
+}
+
+.marker svg[data-selected="true"] {
+  background-color: rgba(0,0,0,0.5);
+}
+
+.marker svg[data-selected="true"]:hover {
+  cursor: default;
+}
+
+#inputPage .inputForms form div.submitDiv {
+  margin: 1em 0;
+  flex-direction: row;
+}
+
+/* INPUT PAGE */
+
+
+
+
+
+/* MAP */
+#theMap {
+  height: 92vh;
+}
+
+#map {
+  height: 100%;
+  position: relative;
+  z-index: 99;
+}
+
+#infoTab {
+  width: 300px;
+  /* min-height: 250px; */
+  background-color: rgba(255,255,255,0.9);
+  backdrop-filter: blur(5px);
+  border-radius: 0 3vmin 3vmin 0;
+  border: 1px solid rgba(0,0,0,0.2);
+  position: absolute;
+  top: 5%;
+  z-index: 100;
+}
+
+#infoTab > div {
+  /* border: 1px solid red; */
+  padding: 1em;
+}
+
+#infoTab .titlePart {
+  text-align: center;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+#infoTab p {
+  padding: 0;
+  margin: 0;
+}
+
+#infoTab .infoPart p {
+  margin-bottom: 0.5em;
+}
+
+#infoTab .infoPart {
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+#theMap .mstModesPart {
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+#theMap .mstModesPart p {
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+#theMap .mstModesPart > div {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#theMap .pathModesPart p {
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+#theMap .pathModesPart > div {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.activeButtonA {
+  background-color: #5E88A0;
+  border: 1px solid #5E88A0;
+	color: white;
+  pointer-events: none;
+}
+
+
+/* ABOUT */
+#aboutPage {
+  /* min-height: 92vh; */
+}
+
+#aboutPage p.display-2 {
+  font-weight: 600;
+}
+
+#aboutPage .containerA > div {
+  border: 2px solid black;
+  background-color: #E3FCFF;
+  border-radius: 3vmin;
+  margin: 2rem 0;
+  width: 100%;
+  align-items: center;
+  padding: 3rem;
+}
+/* ABOUT */
+
+
+/* CONTACT */
+#contactPage p.display-2 {
+  font-weight: 600;
+}
+
+#contactPage .containerA > div {
+  border: 2px solid black;
+  background-color: #E3FCFF;
+  border-radius: 3vmin;
+  margin: 2rem 0;
+  width: 100%;
+  align-items: center;
+  padding: 3rem;
+}
+
+
+#contactPage .contactDetails {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em 0;
+}
+/* CONTACT */
